@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>deskform</class>
+ <widget class="QWidget" name="deskform">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>569</width>
+    <height>434</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QLabel" name="l_bg">
+   <property name="geometry">
+    <rect>
+     <x>-2</x>
+     <y>-2</y>
+     <width>571</width>
+     <height>441</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <action name="a_about">
+   <property name="icon">
+    <iconset resource="cb4s.qrc">
+     <normaloff>:/mwin/trayabout</normaloff>:/mwin/trayabout</iconset>
+   </property>
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="a_exit">
+   <property name="icon">
+    <iconset resource="cb4s.qrc">
+     <normaloff>:/mwin/trayexit</normaloff>:/mwin/trayexit</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="a_setting">
+   <property name="icon">
+    <iconset resource="cb4s.qrc">
+     <normaloff>:/mwin/traysetting</normaloff>:/mwin/traysetting</iconset>
+   </property>
+   <property name="text">
+    <string>设置</string>
+   </property>
+  </action>
+  <action name="a_restart">
+   <property name="icon">
+    <iconset resource="cb4s.qrc">
+     <normaloff>:/mwin/trayrestart</normaloff>:/mwin/trayrestart</iconset>
+   </property>
+   <property name="text">
+    <string>重载</string>
+   </property>
+   <property name="toolTip">
+    <string>重载</string>
+   </property>
+  </action>
+  <action name="a_gk">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="cb4s.qrc">
+     <normaloff>:/mwin/gk</normaloff>:/mwin/gk</iconset>
+   </property>
+   <property name="text">
+    <string>高考倒计日</string>
+   </property>
+  </action>
+  <action name="a_class">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="cb4s.qrc">
+     <normaloff>:/mwin/csv</normaloff>:/mwin/csv</iconset>
+   </property>
+   <property name="text">
+    <string>课程表</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="cb4s.qrc"/>
+ </resources>
+ <connections/>
+</ui>
