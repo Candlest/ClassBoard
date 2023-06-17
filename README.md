@@ -2,6 +2,12 @@
 
   **Class Board**是一款使用Qt/C++开发的，针对**SEEWO**及其它教学一体机设计的，用于**显示教学信息**的壁纸软件。
 
+#### Domo
+
+![Candlest/demo1.png at main · Candlest/Candlest · GitHub](https://raw.githubusercontent.com/Candlest/Candlest/main/demo1.png)
+
+![](https://raw.githubusercontent.com/Candlest/Candlest/main/demo2.png)
+
 **！！！WINDOWS ONLY！！！**
 
 - [Class Board](#class-board)
