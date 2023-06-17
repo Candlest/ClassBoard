@@ -7,11 +7,17 @@
 - [Class Board](#class-board)
   * [Background](#background)
   * [Install](#install)
+<<<<<<< HEAD
       - [从源代码安装](#------)
   * [Usage](#usage)
   * [Related Efforts](#related-efforts)
       - [[ClassTool](https://github.com/IcariaWorks/ClassTools)](#-classtool--https---githubcom-icariaworks-classtools-)
       - [[Qt| Tools for Each Stage of Software Development Lifecycle](qt.io)](#-qt--tools-for-each-stage-of-software-development-lifecycle--qtio-)
+=======
+    - [从源代码安装](#------)
+  * [Usage](#usage)
+  * [Related Efforts](#related-efforts)
+>>>>>>> master
   * [Contributors](#contributors)
   * [License](#license)
 
@@ -75,12 +81,20 @@
 
   解压Release压缩包，有如下文件：
 
+<<<<<<< HEAD
 | Name           | Type    |
 | -------------- | ------- |
 | Background_Set | DIR     |
 | kb.csv         | 课表文件    |
 | ClassBoard.exe | 程序本体    |
 | ClassBoard.pdb | 程序数据库文件 |
+=======
+| Name           | Type |
+| -------------- | ---- |
+| Background_Set | DIR  |
+| kb.csv         | 课表文件 |
+| ClassBoard.exe | 程序本体 |
+>>>>>>> master
 
 *TO DO*
 
