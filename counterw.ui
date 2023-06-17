@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>counterw</class>
+ <widget class="QWidget" name="counterw">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1332</width>
+    <height>267</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="l_now">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>20</y>
+     <width>1191</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;现在是&lt;/span&gt;&lt;span style=&quot; font-size:48pt; font-weight:700;&quot;&gt;%1&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;距离高考还有&lt;/span&gt;&lt;span style=&quot; font-size:48pt; font-weight:700;&quot;&gt;%2&lt;/span&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;天&lt;/span&gt;&lt;span style=&quot; font-size:48pt; font-weight:700;&quot;&gt;%3&lt;/span&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;小时&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

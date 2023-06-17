@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/mwin">
+        <file alias="trayicon">images/AcUnitFilled.svg</file>
+        <file alias="traysetting">images/BuildSharp.svg</file>
+        <file alias="trayexit">images/Exit.svg</file>
+        <file alias="trayabout">images/InformationCircle.svg</file>
+        <file alias="trayrestart">images/Repeat.svg</file>
+        <file alias="csv">images/CalendarSharp.svg</file>
+        <file alias="gk">images/Calculator.svg</file>
+        <file alias="qt">images/Qt_logo_neon_2022.svg</file>
+        <file>images/Qt-5.15.2-green.svg</file>
+    </qresource>
+</RCC>
