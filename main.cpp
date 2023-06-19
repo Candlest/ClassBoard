@@ -2,6 +2,7 @@
 #include "counterw.h"
 #include "class_schedule.h"
 #include "aboutdialog.h"
+#include "timetable.h"
 #include <QApplication>
 #include <QLocale>
 

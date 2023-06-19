@@ -9,5 +9,9 @@
         <file alias="gk">images/Calculator.svg</file>
         <file alias="qt">images/Qt_logo_neon_2022.svg</file>
         <file>images/Qt-5.15.2-green.svg</file>
+        <file alias="sign">images/TrailSign.svg</file>
+        <file alias="todo">images/AssignmentTurnedInRound.svg</file>
+        <file alias="ref">images/ReloadCircle.svg</file>
+        <file alias="gh">images/LogoGithub.svg</file>
     </qresource>
 </RCC>

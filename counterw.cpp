@@ -40,7 +40,7 @@ void counterw::paintEvent(QPaintEvent *)
     /*From https://cloud.tencent.com/developer/article/1546015*/
     QPainter painter(this);
     /* 0x20为透明层颜色，可自定义设置为0x0到0xff */
-    painter.fillRect(this->rect(), QColor(0, 0, 0, 0x0));
+    painter.fillRect(this->rect(), QColor(0, 0, 0, 0x00));
 }
 
 void counterw::initTimer()
@@ -58,9 +58,14 @@ void counterw::setTime()
     QDateTime end_time = QDateTime::fromString("2024-06-07 09:00:00", "yyyy-MM-dd hh:mm:ss");
 
     QTime m_time;
-    m_time.setHMS(0, 0, 0, 0);                                       //初始化数据，时 分 秒 毫秒
-    qDebug() << m_time.addSecs(begin_time.secsTo(end_time)).toString("hh");//计算时间差(秒)，将时间差加入m_time，格式化输出
-    qDebug() << begin_time.daysTo(end_time) << begin_time.toLocalTime().toString(u8"yyyy年MM月dd日 hh:mm:ss");
-    this->ui->l_now->setText(QString(u8R"(<html><head/><body><p align="center"><span style=" font-size:36pt;">现在是</span><span style=" font-size:48pt; font-weight:700;">%1</span></p><p align="center"><span style=" font-size:36pt;">距离高考还有</span><span style=" font-size:48pt; font-weight:700;">%2</span><span style=" font-size:36pt;">天</span><span style=" font-size:48pt; font-weight:700;">%3</span><span style=" font-size:36pt;">小时</span></p></body></html>)"
-                              ).arg(begin_time.toLocalTime().toString(u8"yyyy年MM月dd日 hh:mm:ss")).arg(begin_time.daysTo(end_time)).arg(m_time.addSecs(begin_time.secsTo(end_time)).toString("hh")));
+    m_time.setHMS(0, 0, 0, 0);//初始化数据，时 分 秒 毫秒
+    qint64 right_day = begin_time.daysTo(end_time);
+    if (begin_time.toString("hh").toInt() >= 9){
+        /*高考那天九点后*/
+        right_day --;
+    }
+    //qDebug() << m_time.addSecs(begin_time.secsTo(end_time)).toString("hh");//计算时间差(秒)，将时间差加入m_time，格式化输出
+    //qDebug() << begin_time.daysTo(end_time) << begin_time.toLocalTime().toString(u8"yyyy年MM月dd日 hh:mm:ss");
+    this->ui->l_now->setText(QString(u8R"(<html><head/><body><p align="center"><span style=" font-size:36pt; color:#ffffff;">现在是</span><span style=" font-size:48pt; font-weight:700; color:#ffffff;">%1</span></p><p align="center"><span style=" font-size:36pt; color:#ffffff;">距离</span><span style=" font-size:36pt; font-weight:700; color:#ffffff;">高考</span><span style=" font-size:36pt; color:#ffffff;">还有</span><span style=" font-size:48pt; font-weight:700; color:#ffffff;">%2</span><span style=" font-size:36pt; color:#ffffff;">天</span><span style=" font-size:48pt; font-weight:700; color:#ffffff;">%3</span><span style=" font-size:36pt; color:#ffffff;">小时</span></p></body></html>)"
+                              ).arg(begin_time.toLocalTime().toString(u8"yyyy年MM月dd日 hh:mm:ss")).arg(right_day).arg(m_time.addSecs(begin_time.secsTo(end_time)).toString("hh")));
 }

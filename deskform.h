@@ -15,11 +15,14 @@
 #include <QTimer>
 #include <QtGlobal>
 #include <QProcess>
+#include<QRandomGenerator>
 
 #include "counterw.h"
 #include "class_schedule.h"
 #include "win32mod.h"
 #include "aboutdialog.h"
+#include "timetable.h"
+#include "settingwin.h"
 
 namespace Ui {
 class deskform;
@@ -55,6 +58,8 @@ private slots:
 
     void on_a_class_triggered();
 
+    void on_a_count_small_triggered();
+
 private:
     Ui::deskform *ui;
     QStringList images;
@@ -62,6 +67,8 @@ private:
     counterw *gkw;
     Class_Schedule *csw;
     AboutDialog *ab;
+    TimeTable *tt;
+    SettingWin *sw;
 
 protected:
     //将窗口设置为随着窗口变化而变化

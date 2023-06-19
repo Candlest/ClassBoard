@@ -14,7 +14,7 @@ CONFIG += c++17
 
 RC_ICONS = icon.ico
 #程序版本
-VERSION = 0.1.2.0
+VERSION = 0.1.4.230619
 #程序说明
 QMAKE_TARGET_DESCRIPTION = "Class Board For Seewo"
 #程序名称
@@ -29,6 +29,8 @@ SOURCES += \
     class_schedule.cpp \
     counterw.cpp \
     deskform.cpp \
+    settingwin.cpp \
+    timetable.cpp \
     win32mod.cpp \
     main.cpp
 
@@ -37,13 +39,17 @@ HEADERS += \
     class_schedule.h \
     counterw.h \
     deskform.h \
+    settingwin.h \
+    timetable.h \
     win32mod.h
 
 FORMS += \
     aboutdialog.ui \
     class_schedule.ui \
     counterw.ui \
-    deskform.ui
+    deskform.ui \
+    settingwin.ui \
+    timetable.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -51,7 +57,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    ../../QtProject/ClassBoard/cb4s.qrc \
     cb4s.qrc
 
 DISTFILES += \

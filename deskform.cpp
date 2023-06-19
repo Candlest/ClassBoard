@@ -16,7 +16,7 @@ deskform::deskform(QWidget *parent) :
     initTray();
     initArgs();
     initImages();
-    initBackground(QString::fromLocal8Bit("飞飞母校.jpg"));
+    initBackground(images[QRandomGenerator::global()->bounded(images.length()-1)]);
     initTimer();
     initKits();
 }
@@ -47,6 +47,8 @@ void deskform::initKits()
     gkw->show();
     csw = new Class_Schedule();
     csw->show();
+    tt = new TimeTable();
+    tt->show();
 }
 
 void deskform::initTimer()
@@ -56,7 +58,7 @@ void deskform::initTimer()
     //实现槽函数 Lambda表达式yyds
     connect(bgTimer, &QTimer::timeout, [=]{
         /*抽一张壁纸*/
-        initBackground(images[qrand()%(images.length()-1)]);
+        initBackground(images[QRandomGenerator::global()->bounded(images.length()-1)]);
     });
 
     bgTimer->start(1000*30); //1000 = 1s
@@ -132,6 +134,7 @@ void deskform::initTray() /*初始化托盘*/
     QMenu *menu = new QMenu();
     menu->addAction(ui->a_gk);
     menu->addAction(ui->a_class);
+    menu->addAction(ui->a_count_small);
     menu->addSeparator();
     menu->addAction(ui->a_about);
     menu->addAction(ui->a_setting);
@@ -167,6 +170,8 @@ void deskform::resizeEvent(QResizeEvent *event)
 
 void deskform::on_a_setting_triggered()/*设置*/
 {
+    sw = new SettingWin(this);
+    sw->show();
 }
 
 
@@ -197,5 +202,16 @@ void deskform::on_a_restart_triggered()
     //qApp->closeAllWindows();
     QProcess::startDetached(qApp->applicationFilePath(), QStringList("restart"));
     qApp->exit();
+}
+
+
+void deskform::on_a_count_small_triggered()
+{
+    if(!ui->a_count_small->isChecked()){
+        tt->hide();
+    }
+    else{
+        tt->show();
+    }
 }
 

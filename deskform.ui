@@ -98,6 +98,33 @@
     <string>课程表</string>
    </property>
   </action>
+  <action name="a_count_small">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="cb4s.qrc">
+     <normaloff>:/mwin/todo</normaloff>:/mwin/todo</iconset>
+   </property>
+   <property name="text">
+    <string>事件倒计板</string>
+   </property>
+  </action>
+  <action name="a_ref">
+   <property name="icon">
+    <iconset resource="cb4s.qrc">
+     <normaloff>:/mwin/ref</normaloff>:/mwin/ref</iconset>
+   </property>
+   <property name="text">
+    <string>刷新背景</string>
+   </property>
+   <property name="toolTip">
+    <string>立即刷新背景</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="cb4s.qrc"/>
