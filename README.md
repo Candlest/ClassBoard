@@ -2,13 +2,31 @@
 
   **Class Board**是一款使用Qt/C++开发的，针对**SEEWO**及其它教学一体机设计的，用于**显示教学信息**的壁纸软件。
 
-#### Domo
+## TO DO
 
-![Candlest/demo1.png at main · Candlest/Candlest · GitHub](https://raw.githubusercontent.com/Candlest/Candlest/main/demo1.png)
+- [x] 实现背景幻灯片播放
 
-![](https://raw.githubusercontent.com/Candlest/Candlest/main/demo2.png)
+- [x] 实现高考倒计时（正上）
 
-**！！！WINDOWS ONLY！！！**
+- [x] 实现小事件倒计板（右）
+
+- [x] 实现课表
+
+- [x] 实现托盘配置
+
+- [ ] 实现脱离手动编辑的配置
+
+- [ ] 每日一言
+
+#### Demo
+
+![](https://raw.githubusercontent.com/Candlest/Candlest/main/demo0.png)
+
+![](https://raw.githubusercontent.com/Candlest/Candlest/main/demo1.png)
+
+
+
+**！！！WINDOWS ONLY！！！** 至少目前是（
 
 - [Class Board](#class-board)
   * [Background](#background)
@@ -58,7 +76,7 @@
 
 ## Install
 
-   可以从Release下载打包好的portable版本，也可以自行git clone，使用Qbs编译。
+   可以从Release下载打包好的portable版本，也可以自行git clone，使用qmake编译。
 
 #### 从源代码安装
 
@@ -74,13 +92,18 @@
 
 ## Usage
 
-  解压Release压缩包，有如下文件：
+  解压Release压缩包，（除去Qt依赖）有如下文件：
 
-| Name           | Type |
-| -------------- | ---- |
-| Background_Set | DIR  |
-| kb.csv         | 课表文件 |
-| ClassBoard.exe | 程序本体 |
+| Name           | Type    |
+| -------------- | ------- |
+| Background_Set | DIR     |
+| kb.csv         | 课表配置文件  |
+| djr.csv        | 倒计配置日文件 |
+| ClassBoard.exe | 程序本体    |
+
+### kb.csv
+
+这是课表文件
 
 *TO DO*
 
@@ -107,3 +130,7 @@
 ## License
 
   本项目使用**GPLv3**开源
+
+
+
+![[Large GPLv3 logo with “Free as in Freedom”]](https://www.gnu.org/graphics/gplv3-with-text-136x68.png)
