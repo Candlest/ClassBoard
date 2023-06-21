@@ -68,7 +68,7 @@ void Class_Schedule::initSchedule()
     QString temp;
     for(int i = 1 ; i < tod.count() ; i++){
         temp = ui->label->text();
-        ui->label->setText(temp.arg(this->tod[i]));
+        ui->label->setText(temp.arg(this->tod[i].simplified()));
         qDebug()<<temp;
     }
 }

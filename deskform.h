@@ -15,7 +15,8 @@
 #include <QTimer>
 #include <QtGlobal>
 #include <QProcess>
-#include<QRandomGenerator>
+#include <QRandomGenerator>
+#include <QSettings>
 
 #include "counterw.h"
 #include "class_schedule.h"
@@ -44,6 +45,7 @@ public:
     void initTimer();
     void initKits();
     void initArgs();
+    void initSettings();
 
 private slots:
     void on_a_about_triggered();
@@ -69,6 +71,9 @@ private:
     AboutDialog *ab;
     TimeTable *tt;
     SettingWin *sw;
+
+public:
+    QString PicDir;
 
 protected:
     //将窗口设置为随着窗口变化而变化

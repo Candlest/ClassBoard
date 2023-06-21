@@ -24,8 +24,6 @@
 
 ![](https://raw.githubusercontent.com/Candlest/Candlest/main/demo1.png)
 
-
-
 **！！！WINDOWS ONLY！！！** 至少目前是（
 
 - [Class Board](#class-board)
@@ -130,7 +128,5 @@
 ## License
 
   本项目使用**GPLv3**开源
-
-
 
 ![[Large GPLv3 logo with “Free as in Freedom”]](https://www.gnu.org/graphics/gplv3-with-text-136x68.png)

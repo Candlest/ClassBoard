@@ -15,10 +15,35 @@ deskform::deskform(QWidget *parent) :
 
     initTray();
     initArgs();
-    initImages();
-    initBackground(images[QRandomGenerator::global()->bounded(images.length()-1)]);
+
+
     initTimer();
     initKits();
+
+    initSettings();
+    initImages();
+    initBackground(images[QRandomGenerator::global()->bounded(images.length()-1)]);
+
+}
+
+void deskform::initSettings()
+{
+    qDebug() << "init Settings";
+    QSettings *settings = new QSettings("./settings.conf", QSettings::IniFormat);
+
+    if (!settings->contains("Background/PicDir")){
+        //create new
+        settings->setValue("Background/PicDir", "./Background_Set/");
+        settings->setValue("Background/Mode", "1");
+        settings->setValue("GK_Counter/Date", "2024-06-07 09:00:00");
+        settings->setValue("Kits/BackgroundTrans", QColor(0, 0, 0, 0x00));
+        settings->setValue("Tray/ShowKits", true);
+        settings->sync();
+    }
+    qDebug() << settings->value("Background/PicDir").toString();
+    this->PicDir = settings->value("Background/PicDir").toString();
+
+    delete settings;
 }
 
 void deskform::initArgs(){
@@ -81,7 +106,12 @@ void deskform::initBackground(QString fn = QString("飞飞母校.jpg")) /*初始
 
     this->resize(QSize(screenW,screenH));
 
-    QPixmap pix(QString::fromLocal8Bit("./Background_Set/%1").arg(fn));
+    QPixmap pix(QString::fromLocal8Bit("%1%2").arg(this->PicDir).arg(fn));
+
+    if(pix.isNull())
+    {
+        QMessageBox::warning(this,u8"错误：未能读取到图片信息",u8"错误：未能读取到图片信息\n请检查Settings.conf文件是否正确配置\n或者检查图片存放位置");
+    }
 
     QImage image=pix.toImage();/*开始取色*/
     QPalette palette;
