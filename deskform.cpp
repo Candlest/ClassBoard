@@ -18,7 +18,6 @@ deskform::deskform(QWidget *parent) :
 
 
     initTimer();
-    initKits();
 
     initSettings();
     initImages();
@@ -42,6 +41,10 @@ void deskform::initSettings()
     }
     qDebug() << settings->value("Background/PicDir").toString();
     this->PicDir = settings->value("Background/PicDir").toString();
+
+    initKits();
+
+    this->gkw->dt = QDateTime::fromString(settings->value("GK_Counter/Date").toString(), "yyyy-MM-dd hh:mm:ss");
 
     delete settings;
 }
@@ -200,8 +203,8 @@ void deskform::resizeEvent(QResizeEvent *event)
 
 void deskform::on_a_setting_triggered()/*设置*/
 {
-    sw = new SettingWin(this);
-    sw->show();
+    Setting_Win *df = new Setting_Win();
+    df->show();
 }
 
 

@@ -14,4 +14,5 @@
         <file alias="ref">images/ReloadCircle.svg</file>
         <file alias="gh">images/LogoGithub.svg</file>
     </qresource>
+    <qresource prefix="/"/>
 </RCC>

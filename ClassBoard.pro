@@ -29,7 +29,7 @@ SOURCES += \
     class_schedule.cpp \
     counterw.cpp \
     deskform.cpp \
-    settingwin.cpp \
+    setting_win.cpp \
     timetable.cpp \
     win32mod.cpp \
     main.cpp
@@ -39,7 +39,7 @@ HEADERS += \
     class_schedule.h \
     counterw.h \
     deskform.h \
-    settingwin.h \
+    setting_win.h \
     timetable.h \
     win32mod.h
 
@@ -48,7 +48,7 @@ FORMS += \
     class_schedule.ui \
     counterw.ui \
     deskform.ui \
-    settingwin.ui \
+    setting_win.ui \
     timetable.ui
 
 # Default rules for deployment.

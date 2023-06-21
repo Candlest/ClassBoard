@@ -55,7 +55,7 @@ void counterw::initTimer()
 void counterw::setTime()
 {
     QDateTime begin_time = QDateTime::currentDateTime();
-    QDateTime end_time = QDateTime::fromString("2024-06-07 09:00:00", "yyyy-MM-dd hh:mm:ss");
+    QDateTime end_time = dt;
 
     QTime m_time;
     m_time.setHMS(0, 0, 0, 0);//初始化数据，时 分 秒 毫秒

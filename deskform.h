@@ -18,12 +18,12 @@
 #include <QRandomGenerator>
 #include <QSettings>
 
+#include "setting_win.h"
 #include "counterw.h"
 #include "class_schedule.h"
 #include "win32mod.h"
 #include "aboutdialog.h"
 #include "timetable.h"
-#include "settingwin.h"
 
 namespace Ui {
 class deskform;
@@ -70,7 +70,6 @@ private:
     Class_Schedule *csw;
     AboutDialog *ab;
     TimeTable *tt;
-    SettingWin *sw;
 
 public:
     QString PicDir;

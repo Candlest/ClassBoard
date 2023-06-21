@@ -21,6 +21,7 @@ public:
     explicit counterw(QWidget *parent = nullptr);
     ~counterw();
     void initTimer();
+    QDateTime dt;
 private slots:
     void setTime();
 private:

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Setting_Win</class>
+ <widget class="QMainWindow" name="Setting_Win">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>4</x>
+      <y>9</y>
+      <width>791</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="tab_background">
+     <attribute name="title">
+      <string>桌面背景</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_kits">
+     <attribute name="title">
+      <string>组件设置</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_GK_counter">
+     <attribute name="title">
+      <string>高考倒计时</string>
+     </attribute>
+     <widget class="QDateTimeEdit" name="dateTimeEdit">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>30</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="changeGKDT">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>111</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>更改高考时间</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_counter_board">
+     <attribute name="title">
+      <string>事件倒计板</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_class_schedule">
+     <attribute name="title">
+      <string>课表</string>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
